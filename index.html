@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART PLUG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SMART PLUG</h1>
+            <p>Real-time monitoring of Voltage, Current, and Power</p>
+        </header>
+        
+        <section class="charts-section">
+            <canvas id="voltageChart"></canvas>
+            <canvas id="currentChart"></canvas>
+            <canvas id="powerChart"></canvas>
+        </section>
+
+        <section class="control-section">
+            <div class="led-control">
+                <label for="ledSwitch">LED Control</label>
+                <input type="checkbox" id="ledSwitch" class="switch">
+                <span id="switchLabel" class="switch-label">OFF</span>
+            </div>
+
+            <div class="scheduler">
+                <h2>Schedule LED Turn On</h2>
+                <label for="scheduleTime">Select Time:</label>
+                <input type="time" id="scheduleTime">
+                <button onclick="scheduleLed()">Set Schedule</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
