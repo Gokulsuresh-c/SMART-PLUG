@@ -8,7 +8,7 @@ const voltageChart = new Chart(document.getElementById("voltageChart"), {
     data: {
         labels: [], // Will be filled with time labels
         datasets: [{
-            label: 'Current (A)', // Changed label to "Current (A)"
+            label: 'Current', // Changed label to "Current (A)"
             borderColor: '#00ff00',
             backgroundColor: 'rgba(0, 255, 0, 0.2)',
             data: []
@@ -27,7 +27,7 @@ const voltageChart = new Chart(document.getElementById("voltageChart"), {
                 max: 5, // Set y-axis range from 0 to 5
                 title: {
                     display: true,
-                    text: 'CURRENT' // Label the y-axis as "CURRENT"
+                    text: 'CURRENT (A)' // Label the y-axis as "CURRENT"
                 }
             }
         }
@@ -39,7 +39,7 @@ const currentChart = new Chart(document.getElementById("currentChart"), {
     data: {
         labels: [],
         datasets: [{
-            label: 'Voltage (V)', // Changed label to "Voltage (V)"
+            label: 'Voltage', // Changed label to "Voltage (V)"
             borderColor: '#ff0000',
             backgroundColor: 'rgba(255, 0, 0, 0.2)',
             data: []
@@ -58,7 +58,7 @@ const currentChart = new Chart(document.getElementById("currentChart"), {
                 max: 300, // Set y-axis range from 0 to 300
                 title: {
                     display: true,
-                    text: 'VOLTAGE' // Label the y-axis as "VOLTAGE"
+                    text: 'VOLTAGE (V)' // Label the y-axis as "VOLTAGE"
                 }
             }
         }
@@ -70,7 +70,7 @@ const powerChart = new Chart(document.getElementById("powerChart"), {
     data: {
         labels: [],
         datasets: [{
-            label: 'Power (W)',
+            label: 'Power',
             borderColor: '#0000ff',
             backgroundColor: 'rgba(0, 0, 255, 0.2)',
             data: []
