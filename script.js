@@ -8,36 +8,7 @@ const voltageChart = new Chart(document.getElementById("voltageChart"), {
     data: {
         labels: [], // Will be filled with time labels
         datasets: [{
-            label: 'Voltage (V)',
-            borderColor: '#ff0000',
-            backgroundColor: 'rgba(255, 0, 0, 0.2)',
-            data: []
-        }]
-    },
-    options: {
-        scales: {
-            x: {
-                title: {
-                    display: true,
-                    text: 'Time'
-                }
-            },
-            y: {
-                title: {
-                    display: true,
-                    text: 'Voltage (V)'
-                }
-            }
-        }
-    }
-});
-
-const currentChart = new Chart(document.getElementById("currentChart"), {
-    type: 'line',
-    data: {
-        labels: [],
-        datasets: [{
-            label: 'Current (A)',
+            label: 'Current (A)', // Changed label to "Current (A)"
             borderColor: '#00ff00',
             backgroundColor: 'rgba(0, 255, 0, 0.2)',
             data: []
@@ -52,9 +23,42 @@ const currentChart = new Chart(document.getElementById("currentChart"), {
                 }
             },
             y: {
+                min: 0,
+                max: 5, // Set y-axis range from 0 to 5
                 title: {
                     display: true,
-                    text: 'Current (A)'
+                    text: 'CURRENT' // Label the y-axis as "CURRENT"
+                }
+            }
+        }
+    }
+});
+
+const currentChart = new Chart(document.getElementById("currentChart"), {
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [{
+            label: 'Voltage (V)', // Changed label to "Voltage (V)"
+            borderColor: '#ff0000',
+            backgroundColor: 'rgba(255, 0, 0, 0.2)',
+            data: []
+        }]
+    },
+    options: {
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Time'
+                }
+            },
+            y: {
+                min: 0,
+                max: 300, // Set y-axis range from 0 to 300
+                title: {
+                    display: true,
+                    text: 'VOLTAGE' // Label the y-axis as "VOLTAGE"
                 }
             }
         }
