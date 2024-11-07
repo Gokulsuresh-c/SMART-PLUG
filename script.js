@@ -85,9 +85,11 @@ const powerChart = new Chart(document.getElementById("powerChart"), {
                 }
             },
             y: {
+                min: 0,
+                max: 1500, // Set y-axis range from 0 to 1500W
                 title: {
                     display: true,
-                    text: 'Power (W)'
+                    text: 'Power (W)' // Label the y-axis as "Power (W)"
                 }
             }
         }
